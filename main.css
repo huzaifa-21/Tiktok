@@ -1,0 +1,119 @@
+/*============== start the from circle animation===============*/
+body {
+  background-color: rgba(0, 0, 0, 0.9294117647);
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+form {
+  width: 350px;
+  height: 350px;
+  margin: 100px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 250px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 25px;
+}
+
+input,
+button {
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin: 15px auto;
+  border: none;
+  border-radius: 5px;
+}
+
+button {
+  padding: 0;
+  color: white;
+  background: linear-gradient(83deg, #188ca1, #04aa97);
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button a {
+  display: block;
+  padding: 10px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 5px;
+  font-size: 14px;
+  color: white;
+}
+
+form::before,
+form::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  outline: 5px solid whitesmoke;
+  z-index: -2;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes glow-blue {
+  to {
+    box-shadow: 0 0 10px 35px #007580;
+  }
+}
+@keyframes glow-green {
+  to {
+    box-shadow: 0 0 10px 35px #00adbc;
+  }
+}
+form::after {
+  transform: rotate(380);
+  animation: rotate infinite 3s linear, glow-blue 3s infinite linear alternate;
+  border-radius: 69% 70% 99% 79%;
+  outline-color: #0979b1;
+  box-shadow: 0 0 2px 2px #0979b1;
+}
+
+form::before {
+  animation: rotate-rev infinite 3s linear, glow-green 3s infinite linear alternate;
+  border-radius: 87% 70% 69% 80%;
+  outline-color: #00fbff;
+  box-shadow: 0 0 2px 2px #00fbff;
+}
+
+/*==============finish the from circle animation===============*//*# sourceMappingURL=main.css.map */
